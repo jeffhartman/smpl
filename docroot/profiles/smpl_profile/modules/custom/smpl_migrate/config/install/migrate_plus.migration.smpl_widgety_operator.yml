@@ -59,10 +59,11 @@ process:
   status:
     plugin: default_value
     default_value: 1
-  user_id:
+  uid:
     plugin: default_value
     default_value: 1
   source_id: operator_id
+  field_operator_id: operator_id
   field_website_url: website_url
   field_video_url: video_url
   field_facebook_url: facebook_url

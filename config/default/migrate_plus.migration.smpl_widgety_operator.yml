@@ -2,8 +2,6 @@ uuid: 376894c3-c4bd-4854-82c4-2b69158bf5e6
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: OdtOAvCjjh04rT7UiWJK2gL98KeA4kr3oF7bv17pOhQ
 id: smpl_widgety_operator
 class: null
 field_plugin_method: null
@@ -65,10 +63,11 @@ process:
   status:
     plugin: default_value
     default_value: 1
-  user_id:
+  uid:
     plugin: default_value
     default_value: 1
   source_id: operator_id
+  field_operator_id: operator_id
   field_website_url: website_url
   field_video_url: video_url
   field_facebook_url: facebook_url
