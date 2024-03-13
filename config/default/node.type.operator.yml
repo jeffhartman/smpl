@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Operator
 type: operator
-description: ''
+description: 'A travel/tour operator, such as Norwegian Cruise Line.'
 help: ''
 new_revision: false
 preview_mode: 1

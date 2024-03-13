@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.operator.field_metatags
     - field.field.node.operator.field_operator_id
     - field.field.node.operator.field_twitter_url
+    - field.field.node.operator.field_video_url
     - field.field.node.operator.field_website_url
     - node.type.operator
   module:
@@ -69,6 +70,7 @@ third_party_settings:
         - field_website_url
         - field_facebook_url
         - field_twitter_url
+        - field_video_url
       label: 'Social Media'
       region: content
       parent_name: group_tabs
@@ -129,6 +131,14 @@ content:
   field_twitter_url:
     type: link_default
     weight: 11
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_video_url:
+    type: link_default
+    weight: 12
     region: content
     settings:
       placeholder_url: ''
