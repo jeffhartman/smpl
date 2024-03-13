@@ -2,7 +2,10 @@ uuid: 706abaf1-e172-4651-8f44-509aa6ea76d8
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.basic_html
   module:
+    - filter
     - smpl_base
     - toolbar
 id: editor

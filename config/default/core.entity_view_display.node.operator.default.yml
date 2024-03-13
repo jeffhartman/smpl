@@ -1,0 +1,70 @@
+uuid: 44aa0202-76a7-4ba0-afeb-c79dc3cb88b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.operator.body
+    - field.field.node.operator.field_facebook_url
+    - field.field.node.operator.field_metatags
+    - field.field.node.operator.field_operator_id
+    - field.field.node.operator.field_twitter_url
+    - field.field.node.operator.field_website_url
+    - node.type.operator
+  module:
+    - link
+    - text
+    - user
+id: node.operator.default
+targetEntityType: node
+bundle: operator
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_facebook_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_twitter_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_website_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_metatags: true
+  field_operator_id: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
