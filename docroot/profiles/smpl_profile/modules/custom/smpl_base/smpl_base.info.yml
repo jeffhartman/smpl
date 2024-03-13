@@ -1,0 +1,5 @@
+name: 'SMPL Base'
+type: module
+description: 'Base module for SMPL core functionality.'
+package: SMPL
+core_version_requirement: ^10

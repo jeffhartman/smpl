@@ -7,3 +7,8 @@ style:
     assets/js/main.script.js: {  }
   dependencies:
     - core/drupal
+
+admin.overrides:
+  css:
+    theme:
+      src/admin_css/admin_overrides.css: {preprocess: false}

@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
+    - smpl_base
     - toolbar
 id: administrator
 label: Administrator
 weight: 2
 is_admin: null
 permissions:
+  - 'access smpl administration pages'
   - 'access toolbar'
+  - 'administer smpl base settings'
