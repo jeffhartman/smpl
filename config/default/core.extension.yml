@@ -71,6 +71,7 @@ module:
   search_api: 0
   serialization: 0
   smpl_base: 0
+  smpl_migrate: 0
   system: 0
   taxonomy: 0
   text: 0

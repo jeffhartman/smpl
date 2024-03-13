@@ -1,0 +1,17 @@
+uuid: 7822c440-d2b4-44a6-958d-abdd91cb72fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - smpl_migrate
+  enforced:
+    module:
+      - smpl_migrate
+_core:
+  default_config_hash: 9mdtL4L8arZg3FRwtKLBwvfOfrm4UhefaOcaYUeWPZE
+id: smpl_widgety
+label: 'SMPL: Widgety'
+description: 'SMPL Widgety migrations group.'
+source_type: Widgety
+module: smpl_migrate
+shared_configuration: null

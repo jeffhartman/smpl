@@ -1,0 +1,12 @@
+id: smpl_widgety
+label: 'SMPL: Widgety'
+description: SMPL Widgety migrations group.
+source_type: Widgety
+module: smpl_migrate
+
+shared_configuration:
+
+dependencies:
+  enforced:
+    module:
+      - smpl_migrate
