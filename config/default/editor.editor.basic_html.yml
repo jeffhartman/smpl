@@ -12,8 +12,19 @@ settings:
   toolbar:
     items:
       - heading
+      - style
+      - '|'
       - bold
       - italic
+      - blockQuote
+      - '|'
+      - bulletedList
+      - numberedList
+      - insertTable
+      - '|'
+      - drupalInsertImage
+      - '|'
+      - sourceEditing
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -22,4 +33,29 @@ settings:
         - heading4
         - heading5
         - heading6
-image_upload: {  }
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<a>'
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Link Primary Button'
+          element: '<a class="btn btn-primary">'
+        -
+          label: 'Link Secondary Button'
+          element: '<a class="btn btn-secondary">'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0
