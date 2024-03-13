@@ -44,6 +44,12 @@
         "drupal/webform_rest": "^4.1",
         "drush/drush": "^12.4"
     },
+    "require-dev": {
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "^10.2",
+        "drupal/devel": "^5.1",
+        "drupal/twig_xdebug": "^1.3"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -60,6 +66,49 @@
             "cweagans/composer-patches": true
         },
         "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/PHPCSHandler.php",
+            "scripts/composer/SmplHandler.php",
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "lint:php": [
+            "./vendor/bin/phpcs"
+        ],
+        "lint:php:fix": [
+            "./vendor/bin/phpcbf"
+        ],
+        "lint": [
+            "@lint:php",
+            "Smpl\\composer\\SmplHandler::SmplThemeLint"
+        ],
+        "lint:fix": [
+            "@lint:php:fix",
+            "Smpl\\composer\\SmplHandler::SmplThemeLintFix"
+        ],
+        "test": [
+            "phpunit -c docroot/core/phpunit.xml.dist docroot/profiles/smpl_profile"
+        ],
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\PHPCSHandler::installDrupalSniffs",
+            "Smpl\\composer\\SmplHandler::SmplThemeInstall",
+            "Smpl\\composer\\SmplHandler::SmplThemeBuildDev"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\PHPCSHandler::installDrupalSniffs"
+        ],
+        "build-production": [
+            "Smpl\\composer\\SmplHandler::SmplThemeBuildProd"
+        ]
     },
     "extra": {
         "drupal-scaffold": {
@@ -84,11 +133,5 @@
                 "support"
             ]
         }
-    },
-    "require-dev": {
-        "drupal/coder": "^8.3",
-        "drupal/core-dev": "^10.2",
-        "drupal/devel": "^5.1",
-        "drupal/twig_xdebug": "^1.3"
     }
 }

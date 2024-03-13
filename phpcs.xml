@@ -15,6 +15,9 @@
       <exclude name="Drupal.Commenting.FileComment" />
       <exclude name="Drupal.Commenting.DocComment.ShortSingleLine" />
       <exclude name="Drupal.Files.TxtFileLineLength.TooLong" />
+      <exclude name="Drupal.InfoFiles.AutoAddedKeys.Project" />
+      <exclude name="Drupal.InfoFiles.AutoAddedKeys.Timestamp" />
+      <exclude name="Drupal.InfoFiles.AutoAddedKeys.Version" />
     </rule>
     <rule ref="DrupalPractice" />
 
