@@ -1,0 +1,26 @@
+uuid: e41931c0-ec46-4053-9aa1-80f911f22ff0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smpl_theme
+_core:
+  default_config_hash: uv-5Yj_2XcRKdcbwSbK67LHnPtTfURsC2VR2f-bQhKI
+id: smpl_theme_page_title
+theme: smpl_theme
+region: header
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

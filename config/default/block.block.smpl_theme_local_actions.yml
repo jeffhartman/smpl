@@ -1,0 +1,20 @@
+uuid: 02dfd5ac-202e-4947-a170-47ed53cb80dd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - smpl_theme
+_core:
+  default_config_hash: 90g2BYXbV-1eldOthdZTq13qmLFVK6r-TAGexgnPcLg
+id: smpl_theme_local_actions
+theme: smpl_theme
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

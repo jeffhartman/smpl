@@ -1,0 +1,3 @@
+smpl_theme.settings:
+  type: theme_settings
+  label: 'smpl_theme settings'

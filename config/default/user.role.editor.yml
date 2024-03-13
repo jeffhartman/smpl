@@ -1,0 +1,12 @@
+uuid: 706abaf1-e172-4651-8f44-509aa6ea76d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - toolbar
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access toolbar'

@@ -1,0 +1,22 @@
+uuid: 6fea8015-43ef-4826-95d7-b52d3349ec05
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smpl_theme
+_core:
+  default_config_hash: QP9D9sL_QlpPghYbXWBhhldSPTUsxi4Q2jCb1jb3n-s
+id: smpl_theme_content
+theme: smpl_theme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

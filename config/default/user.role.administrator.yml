@@ -1,0 +1,12 @@
+uuid: c5f30e21-965e-4900-a542-eb4b93329300
+langcode: en
+status: true
+dependencies:
+  module:
+    - toolbar
+id: administrator
+label: Administrator
+weight: 2
+is_admin: null
+permissions:
+  - 'access toolbar'

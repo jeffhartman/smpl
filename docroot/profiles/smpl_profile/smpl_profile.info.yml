@@ -1,0 +1,60 @@
+name: SMPL Install Profile
+type: profile
+description: 'The SMPL Install profile.'
+dependencies:
+  - drupal:address
+  - drupal:block
+  - drupal:block_content
+  - drupal:breakpoint
+  - drupal:ckeditor5
+  - drupal:config
+  - drupal:config_filter
+  - drupal:config_ignore
+  - drupal:config_split
+  - drupal:content_translation
+  - drupal:contextual
+  - drupal:datetime
+  - drupal:datetime_range
+  - drupal:dblog
+  - drupal:editor
+  - drupal:field_ui
+  - drupal:field_group
+  - drupal:filefield_paths
+  - drupal:file
+  - drupal:filter
+  - drupal:focal_point
+  - drupal:fpa
+  - drupal:geolocation
+  - drupal:image
+  - drupal:key
+  - drupal:link
+  - drupal:menu_link_content
+  - drupal:menu_ui
+  - drupal:metatag
+  - drupal:migrate
+  - drupal:migrate_file
+  - drupal:migrate_plus
+  - drupal:module_filter
+  - drupal:node
+  - drupal:options
+  - drupal:page_cache
+  - drupal:path
+  - drupal:pathauto
+  - drupal:range
+  - drupal:responsive_image
+  - drupal:rest
+  - drupal:sdc
+  - drupal:search_api
+  - drupal:system
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:token
+  - drupal:twig_tweak
+  - drupal:user
+  - drupal:views
+  - drupal:views_ui
+  - drupal:webform
+  - drupal:webform_rest
+core_version_requirement: ^9 || ^10
+themes:
+  - smpl_theme

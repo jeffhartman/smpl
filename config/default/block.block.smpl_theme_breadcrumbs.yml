@@ -1,0 +1,22 @@
+uuid: 273ca069-957a-4441-8020-14b7688d8242
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - smpl_theme
+_core:
+  default_config_hash: 41_Pk7MNX90iOQEDGO7lLX9mwq48LjKg6FQBB_EGu8g
+id: smpl_theme_breadcrumbs
+theme: smpl_theme
+region: header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

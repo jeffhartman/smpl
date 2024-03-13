@@ -1,0 +1,29 @@
+name: SMPL
+screenshot: screenshot.png
+'alt text': 'radix_starterkit theme screenshot'
+core_version_requirement: ^10
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+dependencies:
+  - 'drupal:sdc'
+  - 'drupal:serialization'
+'interface translation project': smpl_theme
+'interface translation server pattern': themes/custom/smpl_theme/translations/%language.po
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  header: Header
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - smpl_theme/style
+ckeditor_stylesheets:
+  - assets/css/main.style.css
+version: 6.0.0-beta12
+project: radix
+datestamp: 1708328031
+generator: 'radix_starterkit:6.0.0-beta12'
