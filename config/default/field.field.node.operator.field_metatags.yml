@@ -1,0 +1,21 @@
+uuid: 4579daf3-0229-4798-b759-ebbc461f1dc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.operator
+  module:
+    - metatag
+id: node.operator.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: operator
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

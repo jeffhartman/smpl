@@ -2,11 +2,20 @@ uuid: c5f30e21-965e-4900-a542-eb4b93329300
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
   module:
+    - filter
+    - smpl_base
     - toolbar
 id: administrator
 label: Administrator
 weight: 2
 is_admin: null
 permissions:
+  - 'access smpl administration pages'
   - 'access toolbar'
+  - 'administer smpl base settings'
+  - 'use text format basic_html'
+  - 'use text format full_html'

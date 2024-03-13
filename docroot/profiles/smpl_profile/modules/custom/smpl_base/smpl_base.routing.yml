@@ -1,0 +1,15 @@
+smpl_base.smpl_admin:
+  path: '/admin/smpl'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'SMPL Admin'
+  requirements:
+    _permission: 'access smpl administration pages'
+
+smpl_base.settings:
+  path: '/admin/config/smpl_base/settings'
+  defaults:
+    _form: '\Drupal\smpl_base\Form\SmplBaseSettingsForm'
+    _title: 'SMPL Base Settings'
+  requirements:
+    _permission: 'administer smpl base settings'

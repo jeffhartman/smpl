@@ -1,0 +1,19 @@
+smpl_base.smpl_admin:
+  title: 'SMPL Admin'
+  route_name: 'smpl_base.smpl_admin'
+  parent: 'system.admin'
+  description: 'Administer and configure the SMPL site.'
+  weight: 100
+smpl_base.smpl_settings:
+  title: 'SMPL Settings'
+  description: 'Settings custom SMPL modules'
+  route_name: '<nolink>'
+  parent: system.admin_config
+  weight: -99
+smpl_base.settings:
+  title: 'Base'
+  description: 'Base settings for common Drupal functionality'
+  parent: smpl_base.smpl_settings
+  route_name: smpl_base.settings
+  weight: -99
+  menu_name: SMPL Base

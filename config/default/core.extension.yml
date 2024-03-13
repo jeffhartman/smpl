@@ -70,6 +70,7 @@ module:
   sdc: 0
   search_api: 0
   serialization: 0
+  smpl_base: 0
   system: 0
   taxonomy: 0
   text: 0

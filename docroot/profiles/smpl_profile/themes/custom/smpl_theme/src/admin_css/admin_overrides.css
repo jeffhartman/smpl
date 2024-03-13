@@ -1,0 +1,11 @@
+/* SMPL Admin Menu */
+.toolbar .toolbar-bar .toolbar-icon-smpl-base-smpl-admin:before {
+  -webkit-mask-image: url('icons/acacac/star.svg');
+  mask-image: url('icons/acacac/star.svg');
+}
+
+
+/* Fix Gin drop down fields being hidden in the vertical tabs. */
+.js .vertical-tabs .vertical-tabs__item {
+  overflow: visible !important;
+}

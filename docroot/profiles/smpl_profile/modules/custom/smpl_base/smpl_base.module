@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for SMPL Base module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function smpl_base_page_attachments(array &$attachments) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  if ($theme === 'gin') {
+    $attachments['#attached']['library'][] = 'smpl_theme/admin.overrides';
+  }
+}
