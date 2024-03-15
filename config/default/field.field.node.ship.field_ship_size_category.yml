@@ -1,0 +1,29 @@
+uuid: 3b66cea3-6e39-4116-ad02-91190b2e2b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_size_category
+    - node.type.ship
+    - taxonomy.vocabulary.ship_size_categories
+id: node.ship.field_ship_size_category
+field_name: field_ship_size_category
+entity_type: node
+bundle: ship
+label: 'Ship Size Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ship_size_categories: ship_size_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

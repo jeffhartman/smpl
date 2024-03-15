@@ -1,0 +1,19 @@
+uuid: da7e4ee5-a04f-42a0-b71f-53bcfeea6438
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_imo
+    - node.type.ship
+id: node.ship.field_ship_imo
+field_name: field_ship_imo
+entity_type: node
+bundle: ship
+label: 'Ship IMO'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

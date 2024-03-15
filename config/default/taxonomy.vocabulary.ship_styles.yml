@@ -1,0 +1,8 @@
+uuid: a2056bde-c1f0-4839-9cd2-bb02f39aa1e4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ship Styles'
+vid: ship_styles
+description: ''
+weight: 0

@@ -1,0 +1,84 @@
+uuid: 749ead56-4a7c-48d1-97af-fc770f11ba49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ship.body
+    - field.field.node.ship.field_ship_class
+    - field.field.node.ship.field_ship_id
+    - field.field.node.ship.field_ship_imo
+    - field.field.node.ship.field_ship_size_category
+    - field.field.node.ship.field_ship_style
+    - field.field.node.ship.field_ship_type
+    - node.type.ship
+  module:
+    - text
+    - user
+id: node.ship.default
+targetEntityType: node
+bundle: ship
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_ship_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_ship_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_ship_imo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_ship_size_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_ship_style:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_ship_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

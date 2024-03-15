@@ -1,0 +1,11 @@
+uuid: 1c813fff-f7d3-4527-8cfd-61728d256b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ship_styles
+id: taxonomy_term.ship_styles
+target_entity_type_id: taxonomy_term
+target_bundle: ship_styles
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,8 @@
+uuid: d2841f72-003d-4566-9b87-e0787a7a9560
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ship Size Categories'
+vid: ship_size_categories
+description: ''
+weight: 0
