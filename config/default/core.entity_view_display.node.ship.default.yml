@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.ship.body
+    - field.field.node.ship.field_hero_image
     - field.field.node.ship.field_ship_class
     - field.field.node.ship.field_ship_id
     - field.field.node.ship.field_ship_imo
@@ -25,6 +26,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_hero_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
     region: content
   field_ship_class:
     type: string

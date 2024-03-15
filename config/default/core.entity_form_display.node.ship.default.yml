@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.ship.body
+    - field.field.node.ship.field_hero_image
     - field.field.node.ship.field_ship_class
     - field.field.node.ship.field_ship_id
     - field.field.node.ship.field_ship_imo
@@ -13,12 +14,14 @@ dependencies:
     - node.type.ship
   module:
     - field_group
+    - media_library
     - path
     - text
 third_party_settings:
   field_group:
     group_tabs:
       children:
+        - group_hero_image
         - group_description
         - group_categorization
       label: Tabs
@@ -37,14 +40,13 @@ third_party_settings:
         - field_ship_id
         - field_ship_class
         - field_ship_type
-        - field_ship_size
         - field_ship_size_category
         - field_ship_imo
         - field_ship_style
       label: Categorization
       region: content
       parent_name: group_tabs
-      weight: 5
+      weight: 23
       format_type: tab
       format_settings:
         classes: ''
@@ -59,7 +61,22 @@ third_party_settings:
       label: Description
       region: content
       parent_name: group_tabs
-      weight: 4
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_hero_image:
+      children:
+        - field_hero_image
+      label: 'Hero Image'
+      region: content
+      parent_name: group_tabs
+      weight: 20
       format_type: tab
       format_settings:
         classes: ''
@@ -88,6 +105,13 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_hero_image:
+    type: media_library_widget
+    weight: 21
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_ship_class:
     type: string_textfield

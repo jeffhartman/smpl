@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.ship.body
+    - field.field.node.ship.field_hero_image
     - field.field.node.ship.field_ship_class
     - field.field.node.ship.field_ship_id
     - field.field.node.ship.field_ship_imo
@@ -34,6 +35,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_hero_image: true
   field_ship_class: true
   field_ship_id: true
   field_ship_imo: true
