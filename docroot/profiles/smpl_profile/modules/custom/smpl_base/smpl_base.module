@@ -10,7 +10,10 @@
  */
 function smpl_base_page_attachments(array &$attachments) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
-  if ($theme === 'gin') {
+  $user = \Drupal::currentUser();
+
+  // Check for theme or permission for the admin menu.
+  if ($theme === 'gin' || $user->hasPermission('access administration menu')) {
     $attachments['#attached']['library'][] = 'smpl_theme/admin.overrides';
   }
 }
