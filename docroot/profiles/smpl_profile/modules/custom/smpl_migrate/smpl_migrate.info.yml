@@ -1,0 +1,5 @@
+name: 'SMPL Migrate'
+type: module
+description: 'Content migrations from various sources'
+package: SMPL
+core_version_requirement: ^10

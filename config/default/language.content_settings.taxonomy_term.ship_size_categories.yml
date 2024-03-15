@@ -1,0 +1,11 @@
+uuid: a7bddf9e-1e69-4c6c-81d3-b87c8502122f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ship_size_categories
+id: taxonomy_term.ship_size_categories
+target_entity_type_id: taxonomy_term
+target_bundle: ship_size_categories
+default_langcode: site_default
+language_alterable: false

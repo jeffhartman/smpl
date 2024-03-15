@@ -1,0 +1,24 @@
+uuid: d55fc49b-e3b0-4dc3-898f-5aa45fa7e38c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ship
+  module:
+    - text
+id: node.ship.body
+field_name: body
+entity_type: node
+bundle: ship
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

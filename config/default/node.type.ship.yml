@@ -1,4 +1,4 @@
-uuid: 75fc2cd1-64f8-44d5-b750-27141ccd55c9
+uuid: cd493e44-a95a-4577-a76c-09239563d463
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Operator
-type: operator
-description: 'A travel/tour operator, such as Norwegian Cruise Line.'
+name: Ship
+type: ship
+description: 'A ship, vessel, etc.'
 help: ''
 new_revision: false
 preview_mode: 1

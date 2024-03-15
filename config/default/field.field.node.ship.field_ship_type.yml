@@ -1,0 +1,19 @@
+uuid: 8c31e2b5-9580-46dc-80aa-4cd496cd9c96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_type
+    - node.type.ship
+id: node.ship.field_ship_type
+field_name: field_ship_type
+entity_type: node
+bundle: ship
+label: 'Ship Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

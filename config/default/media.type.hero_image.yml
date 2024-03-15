@@ -1,0 +1,13 @@
+uuid: 6b285cc7-4531-40ba-8fb1-0cae1dee0996
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image
+label: 'Hero Image'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

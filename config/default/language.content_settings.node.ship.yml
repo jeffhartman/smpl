@@ -1,0 +1,16 @@
+uuid: 84157be1-7f92-468a-b173-556bca6f6d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ship
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.ship
+target_entity_type_id: node
+target_bundle: ship
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: fb715533-48a6-4a2d-8fac-7d07aab12f2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hero_image
+id: media.hero_image
+target_entity_type_id: media
+target_bundle: hero_image
+default_langcode: site_default
+language_alterable: false

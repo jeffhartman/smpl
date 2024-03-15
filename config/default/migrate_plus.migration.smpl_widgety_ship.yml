@@ -1,0 +1,106 @@
+uuid: 5a695a5b-9d9d-48a9-8590-317a7477f2f3
+langcode: en
+status: true
+dependencies: {  }
+id: smpl_widgety_ship
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: smpl_widgety
+label: 'SMPL Widgety Ships'
+source:
+  track_changes: true
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  include_raw_data: true
+  urls:
+    - 'https://www.widgety.co.uk/api/ships.json?token={{token}}&app_id={{app_id}}&limit'
+  item_selector: ships
+  fields:
+    -
+      name: widgety_ship_id
+      label: 'Widgety Ship ID'
+      selector: id
+    -
+      name: ship_name
+      label: 'Ship name'
+      selector: title
+    -
+      name: summary
+      label: 'Ship summary'
+      selector: teaser
+    -
+      name: body
+      label: 'Ship description'
+      selector: introduction
+    -
+      name: ship_class
+      label: 'Ship class'
+      selector: ship_class
+    -
+      name: ship_size
+      label: 'Ship size'
+      selector: size
+    -
+      name: ship_style
+      label: 'Ship style'
+      selector: style
+    -
+      name: ship_type
+      label: 'Ship type'
+      selector: ship_type
+    -
+      name: ship_imo
+      label: 'Ship IMO'
+      selector: imo
+  ids:
+    widgety_ship_id:
+      type: integer
+process:
+  title: ship_name
+  status:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
+  source_id: widgety_ship_id
+  field_ship_id: widgety_ship_id
+  field_ship_imo: ship_imo
+  field_ship_class: ship_class
+  field_ship_type: ship_type
+  body/summary:
+    plugin: callback
+    callable: strip_tags
+    source: summary
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+  field_ship_style:
+    plugin: static_map
+    bypass: true
+    source: ship_style
+    map:
+      classic: 6
+      expedition: 7
+      luxury: 8
+      ultra_luxury: 9
+  field_ship_size_category:
+    plugin: static_map
+    bypass: true
+    source: ship_size
+    map:
+      boutique: 1
+      mini: 2
+      small: 3
+      medium: 4
+      large: 5
+destination:
+  plugin: 'entity:node'
+  default_bundle: ship
+migration_dependencies:
+  required: {  }
+  optional: {  }

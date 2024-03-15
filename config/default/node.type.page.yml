@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Page
 type: page
-description: ''
+description: 'A basic landing page.'
 help: ''
 new_revision: false
 preview_mode: 1

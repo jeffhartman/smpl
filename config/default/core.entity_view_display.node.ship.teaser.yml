@@ -1,0 +1,46 @@
+uuid: b5755c41-27e1-4502-a627-fa24b7ae216d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ship.body
+    - field.field.node.ship.field_hero_image
+    - field.field.node.ship.field_ship_class
+    - field.field.node.ship.field_ship_id
+    - field.field.node.ship.field_ship_imo
+    - field.field.node.ship.field_ship_size_category
+    - field.field.node.ship.field_ship_style
+    - field.field.node.ship.field_ship_type
+    - node.type.ship
+  module:
+    - text
+    - user
+id: node.ship.teaser
+targetEntityType: node
+bundle: ship
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero_image: true
+  field_ship_class: true
+  field_ship_id: true
+  field_ship_imo: true
+  field_ship_size_category: true
+  field_ship_style: true
+  field_ship_type: true
+  langcode: true
+  search_api_excerpt: true
