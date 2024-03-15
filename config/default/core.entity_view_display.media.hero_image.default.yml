@@ -1,0 +1,33 @@
+uuid: b9502c6b-5608-4d4a-afb2-f8b679615b35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.hero_image.field_media_image
+    - image.style.large
+    - media.type.hero_image
+  module:
+    - image
+id: media.hero_image.default
+targetEntityType: media
+bundle: hero_image
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
