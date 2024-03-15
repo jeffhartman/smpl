@@ -1,0 +1,60 @@
+id: smpl_widgety_ship_hero_image_media
+label: 'SMPL: Widgety Ship Hero Image Media'
+source:
+  track_changes: true
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  include_raw_data: true
+    # Full URLs are set in the settings/secrets file.
+    - 'https://www.widgety.co.uk/api/ships.json?token={{token}}&app_id={{app_id}}&limit'
+
+  item_selector: ships
+
+  fields:
+    -
+      name: widgety_ship_id
+      label: 'Widgety Ship ID'
+      selector: id
+    -
+      name: hero_image_url
+      label: 'Cover Image URL'
+      selector: cover_image_href
+
+  ids:
+    widgety_ship_id:
+      type: integer
+
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  status:
+    plugin: default_value
+    default_value: 1
+  name:
+    plugin: callback
+    callable: basename
+    source: hero_image_url
+  field_media_image:
+    target_id:
+      plugin: migration_lookup
+      migration: smpl_widgety_ship_hero_image_file
+      source: widgety_ship_id
+      no_stub: true
+
+  skip_process_if_not_set:
+    plugin: skip_on_empty
+    source: parent
+    method: process
+
+destination:
+  plugin: 'entity:media'
+  default_bundle: hero_image
+
+migration_dependencies:
+  required:
+    - smpl_widgety_ship_hero_image_file
+  optional: {}
+
+migration_group: smpl_widgety
