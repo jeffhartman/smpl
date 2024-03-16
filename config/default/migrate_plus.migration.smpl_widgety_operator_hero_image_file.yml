@@ -1,5 +1,14 @@
-id: smpl_widgety_ship_hero_image_file
-label: 'SMPL: Widgety Ship Hero Image File'
+uuid: c3529a7a-839a-4152-ad66-b67b6f92cd1f
+langcode: en
+status: true
+dependencies: {  }
+id: smpl_widgety_operator_hero_image_file
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: smpl_widgety
+label: 'SMPL: Widgety Operator Hero Image File'
 source:
   track_changes: true
   plugin: url
@@ -7,41 +16,38 @@ source:
   data_parser_plugin: json
   include_raw_data: true
   urls:
-    # Full URLs are set in the settings/secrets file.
-    - 'https://www.widgety.co.uk/api/ships.json?token={{token}}&app_id={{app_id}}&limit'
-
+    - 'https://www.widgety.co.uk/api/operators.json?token={{token}}&app_id={{app_id}}&limit'
   constants:
-    DRUPAL_FILE_DIRECTORY: 'public://ship-images/'
-
-  item_selector: ships
-
+    DRUPAL_FILE_DIRECTORY: 'public://operator-images/'
+  item_selector: operators
   fields:
     -
-      name: widgety_ship_id
-      label: 'Widgety Ship ID'
+      name: widgety_operator_id
+      label: 'Widgety Operator ID'
       selector: id
     -
       name: hero_image_url
       label: 'Cover Image URL'
       selector: cover_image_href
-
   ids:
-    widgety_ship_id:
-      type: integer
-
+    widgety_operator_id:
+      type: string
 process:
   uid:
     plugin: default_value
     default_value: 1
   destination_filename:
-    - plugin: callback
+    -
+      plugin: callback
       callable: basename
       source: hero_image_url
-    - plugin: service
+    -
+      plugin: service
       service: transliteration
       method: transliterate
   destination_path:
-    - plugin: concat
+    -
+      plugin: concat
       source:
         - constants/DRUPAL_FILE_DIRECTORY
         - '@destination_filename'
@@ -57,12 +63,8 @@ process:
     service: file.mime_type.guesser
     method: guessMimeType
     source: '@destination_filename'
-
 destination:
-  plugin: entity:file
-
+  plugin: 'entity:file'
 migration_dependencies:
-  required: {}
-  optional: {}
-
-migration_group: smpl_widgety
+  required: {  }
+  optional: {  }

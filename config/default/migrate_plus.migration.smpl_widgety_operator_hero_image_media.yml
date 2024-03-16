@@ -1,0 +1,58 @@
+uuid: bc49625c-0a63-4a1e-9a5f-adcef9b2de5d
+langcode: en
+status: true
+dependencies: {  }
+id: smpl_widgety_operator_hero_image_media
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: smpl_widgety
+label: 'SMPL: Widgety Operator Hero Image Media'
+source:
+  track_changes: true
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  include_raw_data: true
+  item_selector: operators
+  fields:
+    -
+      name: widgety_operator_id
+      label: 'Widgety Operator ID'
+      selector: id
+    -
+      name: hero_image_url
+      label: 'Cover Image URL'
+      selector: cover_image_href
+  ids:
+    widgety_operator_id:
+      type: string
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  status:
+    plugin: default_value
+    default_value: 1
+  name:
+    plugin: callback
+    callable: basename
+    source: hero_image_url
+  field_media_image:
+    target_id:
+      plugin: migration_lookup
+      migration: smpl_widgety_operator_hero_image_file
+      source: widgety_operator_id
+      no_stub: true
+  skip_process_if_not_set:
+    plugin: skip_on_empty
+    source: parent
+    method: process
+destination:
+  plugin: 'entity:media'
+  default_bundle: hero_image
+migration_dependencies:
+  required:
+    - smpl_widgety_operator_hero_image_file
+  optional: {  }

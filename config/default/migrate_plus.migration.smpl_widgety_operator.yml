@@ -20,7 +20,7 @@ source:
   item_selector: operators
   fields:
     -
-      name: operator_id
+      name: widgety_operator_id
       label: 'Operator ID'
       selector: id
     -
@@ -56,7 +56,7 @@ source:
       label: 'Hero Image URL'
       selector: cover_image_href
   ids:
-    operator_id:
+    widgety_operator_id:
       type: string
 process:
   title: operator_name
@@ -66,8 +66,8 @@ process:
   uid:
     plugin: default_value
     default_value: 1
-  source_id: operator_id
-  field_operator_id: operator_id
+  source_id: widgety_operator_id
+  field_widgety_operator_id: widgety_operator_id
   field_website_url: website_url
   field_video_url: video_url
   field_facebook_url: facebook_url
@@ -80,6 +80,11 @@ process:
   body/format:
     plugin: default_value
     default_value: basic_html
+  field_hero_image:
+    plugin: migration_lookup
+    migration: smpl_widgety_operator_hero_image_media
+    no_stub: true
+    source: widgety_operator_id
 destination:
   plugin: 'entity:node'
   default_bundle: operator

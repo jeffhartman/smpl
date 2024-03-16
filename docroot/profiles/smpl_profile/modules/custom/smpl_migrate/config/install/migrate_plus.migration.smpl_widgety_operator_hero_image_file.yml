@@ -1,5 +1,5 @@
-id: smpl_widgety_ship_hero_image_file
-label: 'SMPL: Widgety Ship Hero Image File'
+id: smpl_widgety_operator_hero_image_file
+label: 'SMPL: Widgety Operator Hero Image File'
 source:
   track_changes: true
   plugin: url
@@ -8,17 +8,17 @@ source:
   include_raw_data: true
   urls:
     # Full URLs are set in the settings/secrets file.
-    - 'https://www.widgety.co.uk/api/ships.json?token={{token}}&app_id={{app_id}}&limit'
+    - 'https://www.widgety.co.uk/api/operators.json?token={{token}}&app_id={{app_id}}&limit'
 
   constants:
-    DRUPAL_FILE_DIRECTORY: 'public://ship-images/'
+    DRUPAL_FILE_DIRECTORY: 'public://operator-images/'
 
-  item_selector: ships
+  item_selector: operators
 
   fields:
     -
-      name: widgety_ship_id
-      label: 'Widgety Ship ID'
+      name: widgety_operator_id
+      label: 'Widgety Operator ID'
       selector: id
     -
       name: hero_image_url
@@ -26,8 +26,8 @@ source:
       selector: cover_image_href
 
   ids:
-    widgety_ship_id:
-      type: integer
+    widgety_operator_id:
+      type: string
 
 process:
   uid:

@@ -98,6 +98,11 @@ process:
       small: 3
       medium: 4
       large: 5
+  field_hero_image:
+    plugin: migration_lookup
+    migration: smpl_widgety_ship_hero_image_media
+    no_stub: true
+    source: widgety_ship_id
 destination:
   plugin: 'entity:node'
   default_bundle: ship
