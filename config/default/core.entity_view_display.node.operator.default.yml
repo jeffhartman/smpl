@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.operator.body
     - field.field.node.operator.field_facebook_url
+    - field.field.node.operator.field_hero_image
     - field.field.node.operator.field_metatags
     - field.field.node.operator.field_operator_id
     - field.field.node.operator.field_twitter_url
@@ -38,6 +39,14 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_hero_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
     region: content
   field_twitter_url:
     type: link
