@@ -1,0 +1,17 @@
+uuid: d98ce7c0-3836-418a-87dc-95cd22686658
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_2u_xl_2x_fpsc_1440x808
+label: 'SMPL - 16:9 Card | 2u | XL 2x | FPSC 1440x808'
+effects:
+  b4d1ce05-b075-4dcd-ba3c-0665c5ef70a5:
+    uuid: b4d1ce05-b075-4dcd-ba3c-0665c5ef70a5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 808
+      crop_type: focal_point

@@ -1,0 +1,17 @@
+uuid: cec59288-4f1c-4e5b-b06d-6688d2637bf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_4u_xl_1x_fpsc_360x202
+label: 'SMPL - 16:9 Card | 4u | XL 1x | FPSC 360x202'
+effects:
+  e9261ea1-278c-456e-a307-ed1ad440be57:
+    uuid: e9261ea1-278c-456e-a307-ed1ad440be57
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 202
+      crop_type: focal_point

@@ -1,0 +1,17 @@
+uuid: a3b46089-b4e5-483a-a772-ce8889317921
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_1u_xs_1x_fpsc_576x324
+label: 'SMPL - 16:9 Card | 1u | XS 1x | FPSC 576x324'
+effects:
+  b1fd216d-10b7-4b98-bd84-1b1a13c3d06f:
+    uuid: b1fd216d-10b7-4b98-bd84-1b1a13c3d06f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 575
+      height: 323
+      crop_type: focal_point

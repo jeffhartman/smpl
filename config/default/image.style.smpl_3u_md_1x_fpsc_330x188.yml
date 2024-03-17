@@ -1,0 +1,17 @@
+uuid: 28bab83c-e154-4867-988b-a170fee701a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_3u_md_1x_fpsc_330x188
+label: 'SMPL - 16:9 Card | 3u | MD 1x | FPSC 330x188'
+effects:
+  eb984b91-df3b-45be-9bcf-1a21fa6d59dd:
+    uuid: eb984b91-df3b-45be-9bcf-1a21fa6d59dd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 330
+      height: 188
+      crop_type: focal_point

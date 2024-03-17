@@ -1,0 +1,17 @@
+uuid: 27f77c6d-576e-4a44-8485-b2d38f417230
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_hero_xl_1x_fpsc_1920x1080
+label: 'SMPL - Hero XL 1x - FPSC 1920x1080'
+effects:
+  3b667e20-b7fc-4d67-bee1-b992cc7e60f2:
+    uuid: 3b667e20-b7fc-4d67-bee1-b992cc7e60f2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      crop_type: focal_point

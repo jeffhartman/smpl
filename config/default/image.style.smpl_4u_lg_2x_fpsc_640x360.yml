@@ -1,0 +1,17 @@
+uuid: 35bc4721-6823-419b-aa23-02d9c2b34294
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_4u_lg_2x_fpsc_640x360
+label: 'SMPL - 16:9 Card | 4u | LG 2x | FPSC 640x360'
+effects:
+  283e9a9f-19e1-4efd-ad7a-bfac5546d6f0:
+    uuid: 283e9a9f-19e1-4efd-ad7a-bfac5546d6f0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360
+      crop_type: focal_point

@@ -1,0 +1,17 @@
+uuid: 6020dc1a-6752-427d-a123-1bc0b2721f9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_hero_xl_2x_fpsc_3840x2160
+label: 'SMPL - Hero XL 2x - FPSC 3840x2160'
+effects:
+  3c147d0f-e10e-4454-b3b8-96cad79cbcc9:
+    uuid: 3c147d0f-e10e-4454-b3b8-96cad79cbcc9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 3840
+      height: 2160
+      crop_type: focal_point

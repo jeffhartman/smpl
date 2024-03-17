@@ -1,0 +1,73 @@
+uuid: 0b02cc84-abf2-4c7e-9885-a8ba0b2e8acb
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.smpl_2u_md_1x_fpsc_496x280
+    - image.style.smpl_2u_sm_1x_fpsc_384x216
+    - image.style.smpl_2u_sm_2x_fpsc_768x432
+    - image.style.smpl_2u_xs_1x_fpsc_288x162
+    - image.style.smpl_2u_xs_2x_fpsc_576x324
+    - image.style.smpl_3u_lg_1x_fpsc_426x240
+    - image.style.smpl_3u_lg_2x_fpsc_852x480
+    - image.style.smpl_3u_md_1x_fpsc_330x188
+    - image.style.smpl_3u_md_2x_fpsc_660x376
+    - image.style.smpl_3u_xl_1x_fpsc_480x270
+    - image.style.smpl_3u_xl_2x_fpsc_960x540
+  theme:
+    - smpl_theme
+id: card
+label: 'SMPL - Card'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_3u_xl_1x_fpsc_480x270
+    breakpoint_id: default.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_3u_xl_2x_fpsc_960x540
+    breakpoint_id: default.xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_3u_lg_1x_fpsc_426x240
+    breakpoint_id: default.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_3u_lg_2x_fpsc_852x480
+    breakpoint_id: default.lg
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_3u_md_1x_fpsc_330x188
+    breakpoint_id: default.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_3u_md_2x_fpsc_660x376
+    breakpoint_id: default.md
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_2u_sm_1x_fpsc_384x216
+    breakpoint_id: default.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_2u_sm_2x_fpsc_768x432
+    breakpoint_id: default.sm
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_2u_xs_1x_fpsc_288x162
+    breakpoint_id: default.xs
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: smpl_2u_xs_2x_fpsc_576x324
+    breakpoint_id: default.xs
+    multiplier: 2x
+breakpoint_group: smpl_theme
+fallback_image_style: smpl_2u_md_1x_fpsc_496x280

@@ -1,0 +1,17 @@
+uuid: 8f39213d-b38f-426c-9c01-e16e7933f50a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: smpl_3u_lg_1x_fpsc_426x240
+label: 'SMPL - 16:9 Card | 3u | LG 1x | FPSC 426x240'
+effects:
+  877b42a3-4390-41c6-8fea-106f049f9843:
+    uuid: 877b42a3-4390-41c6-8fea-106f049f9843
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 426
+      height: 240
+      crop_type: focal_point
