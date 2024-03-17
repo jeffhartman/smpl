@@ -1,11 +1,11 @@
 {#
 /**
  * @file
- * Theme override for a main view template.
+ * Theme override for main view template.
  *
  * Available variables:
  * - attributes: Remaining HTML attributes for the element.
- * - css_name: A CSS-safe version of the view name.
+ * - css_name: A css-safe version of the view name.
  * - css_class: The user-specified classes names, if any.
  * - header: The optional header.
  * - footer: The optional footer.
@@ -25,9 +25,99 @@
  * - attachment_after: An optional attachment view to be displayed after the
  *   view content.
  * - dom_id: Unique id for every view being printed to give unique class for
- *   JavaScript.
+ *   Javascript.
  *
  * @see template_preprocess_views_view()
  */
 #}
-{% include "radix:views-view" %}
+{% set view_view_utility_classes = view_view_utility_classes|default([]) %}
+
+{%
+  set classes = [
+  'view',
+  'view-' ~ id|clean_class,
+  'view-id-' ~ id,
+  'view-display-id-' ~ display_id,
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+  css_name ? 'view-' ~ css_name,
+]|merge(view_view_utility_classes)
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% block views_header %}
+    {% if header %}
+      <div class="view-header">
+        {{ header }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block views_filters %}
+    {% if exposed %}
+      <div class="view-filters">
+        {{ exposed }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+
+  {% block views_attachment_before %}
+    {% if attachment_before %}
+      <div class="attachment attachment-before">
+        {{ attachment_before }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block views_rows %}
+    {% if rows %}
+      <div class="view-content row">
+        {{ rows }}
+      </div>
+    {% elseif empty %}
+      <div class="view-empty">
+        {{ empty }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block views_pager %}
+    {% if pager %}
+      {{ pager }}
+    {% endif %}
+  {% endblock %}
+
+  {% block views_attachment_after %}
+    {% if attachment_after %}
+      <div class="attachment attachment-after">
+        {{ attachment_after }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block views_more %}
+    {% if more %}
+      {{ more }}
+    {% endif %}
+  {% endblock %}
+
+  {% block views_footer %}
+    {% if footer %}
+      <div class="view-footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block views_feed_icons %}
+    {% if feed_icons %}
+      <div class="feed-icons">
+        {{ feed_icons }}
+      </div>
+    {% endif %}
+  {% endblock %}
+</div>

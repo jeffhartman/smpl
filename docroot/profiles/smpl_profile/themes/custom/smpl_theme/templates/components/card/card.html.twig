@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Template for a card view.
+ */
+#}
+{% set component_classes = [
+  'card'
+] %}
+
+{% if classes is not null %}
+  {% set classes = component_classes|merge(classes) %}
+{% else %}
+  {% set classes = component_classes %}
+{% endif %}
+
+{% block card %}
+  <article{{ attributes.addClass(classes) }}>
+    {% block content %}
+        <div class="card-img">
+          <a href="{{ card_primary_cta_url }}"{% if blank_target %} target="_blank"{% endif %}>
+            {% block card_image %}{% endblock %}
+          </a>
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-title">
+          <a href="{{ card_primary_cta_url }}"{% if blank_target %} target="_blank"{% endif %}>
+            {% block card_title %}{% endblock %}
+          </a>
+        </h3>
+        <div class="card-text">
+          {% block card_text %}{% endblock %}
+        </div>
+      </div>
+
+      <div class="card-cta">
+        {% block card_cta %}
+          {% if card_primary_cta_url %}
+            <a href="{{ card_primary_cta_url }}" class="card-link"{% if blank_target %} target="_blank"{% endif %}>{% if card_primary_cta_text %}{{ card_primary_cta_text }}{% else %}{{ 'Read more'|t }}{% endif %}</a>
+          {% endif %}
+        {% endblock %}
+      </div>
+    {% endblock %}
+  </article>
+{% endblock card %}
