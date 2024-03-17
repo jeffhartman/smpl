@@ -12161,4 +12161,22 @@ th {
   padding-left: 0;
 }
 
+.component--card {
+  margin-bottom: 1.5rem;
+}
+
+.card .card-img img {
+  width: 100%;
+  height: auto;
+}
+.card .card-body .card-text {
+  margin: 0.75rem 0;
+}
+.card .card-body .card-link {
+  display: block;
+}
+.card .card-cta {
+  padding: 0 1rem 1rem 1rem;
+}
+
 /*# sourceMappingURL=main.style.css.map*/

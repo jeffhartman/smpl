@@ -1,0 +1,29 @@
+.component--card {
+  margin-bottom: $grid-gutter-width;
+}
+
+.card {
+  .card-img {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .card-body {
+    .card-title {
+    }
+
+    .card-text {
+      margin: 0.75rem 0;
+    }
+
+    .card-link {
+      display: block;
+    }
+  }
+
+  .card-cta {
+    padding: 0 $card-spacer-x $card-spacer-y $card-spacer-x;
+  }
+}
