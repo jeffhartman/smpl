@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6285679f4c42966ef4dfeeaccfd3ddf8",
+    "content-hash": "7d91043006bcc3d8eb33b845144f92b4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2769,6 +2769,152 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/imageapi_optimize",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize.git",
+                "reference": "4.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "6139e7d5d5d5dd28bf51b15118c8c84d6ff91614"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.1",
+                    "datestamp": "1671725073",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "jcisio",
+                    "homepage": "https://www.drupal.org/user/210762"
+                },
+                {
+                    "name": "Steven Jones",
+                    "homepage": "https://www.drupal.org/user/99644"
+                }
+            ],
+            "description": "Define pipelines for image optimization and provide integration with core image styles.",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imageapi_optimize"
+            }
+        },
+        {
+            "name": "drupal/imageapi_optimize_gd",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize_gd.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_gd-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "aaa53f846257f9763eb44cd124a09d390aff0443"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/imageapi_optimize": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1682462483",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                }
+            ],
+            "description": "Provides ImageAPI Optimize processor for adjusting image quality via GD.",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize_gd",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imageapi_optimize_gd"
+            }
+        },
+        {
+            "name": "drupal/imageapi_optimize_webp",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize_webp.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_webp-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "c680728a66b58c16dc99df9e972b9094d1dc459b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/imageapi_optimize": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1681161804",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                }
+            ],
+            "description": "Add WebP support to Image API",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize_webp",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/imageapi_optimize_webp",
+                "issues": "https://www.drupal.org/project/issues/imageapi_optimize_webp"
+            }
         },
         {
             "name": "drupal/jquery_ui",

@@ -1,0 +1,24 @@
+uuid: 3a824489-31de-4c50-a88c-5791a64e0389
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_gd
+    - imageapi_optimize_webp
+name: standard_quality
+label: 'Standard Quality (WebP 75%, GD 70%)'
+processors:
+  c1748d6d-338e-4a41-ad56-7f4da8947887:
+    id: imageapi_optimize_webp
+    data:
+      quality: '75'
+    weight: 1
+    uuid: c1748d6d-338e-4a41-ad56-7f4da8947887
+  0ce1c6ae-79ae-4268-a721-0754e7ad6fad:
+    id: imageapi_optimize_gd
+    data:
+      quality: '70'
+      file_types:
+        image/jpeg: image/jpeg
+    weight: 2
+    uuid: 0ce1c6ae-79ae-4268-a721-0754e7ad6fad

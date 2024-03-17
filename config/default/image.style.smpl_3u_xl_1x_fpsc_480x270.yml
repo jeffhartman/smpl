@@ -1,7 +1,18 @@
 uuid: 42db5313-963e-4259-abc8-7ff1287b1249
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - focal_point
 name: smpl_3u_xl_1x_fpsc_480x270
 label: 'SMPL - 16:9 Card | 3u | XL 1x | FPSC 480x270'
-effects: {  }
+effects:
+  1bd1eb6b-e46d-44ca-9eb8-9f57784206f9:
+    uuid: 1bd1eb6b-e46d-44ca-9eb8-9f57784206f9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 270
+      crop_type: focal_point
+pipeline: __default__

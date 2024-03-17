@@ -36,6 +36,10 @@ module:
   geolocation_leaflet: 0
   gin_toolbar: 0
   image: 0
+  imageapi_optimize: 0
+  imageapi_optimize_gd: 0
+  imageapi_optimize_webp: 0
+  imageapi_optimize_webp_responsive: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_draggable: 0
