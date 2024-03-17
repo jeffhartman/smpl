@@ -1,3 +1,93 @@
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
-definitions: {  }
+definitions:
+  'admin_toolbar_tools__extra_links:views_ui__files':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    expanded: false
+    weight: 0
+  'admin_toolbar_tools__extra_links:views_ui__frontpage':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__glossary':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__media':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__media_library':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__user_admin_people':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__content_recent':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__taxonomy_term':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__watchdog':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__webform_submissions':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__who_s_new':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__who_s_online':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__archive':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    expanded: false
+    weight: 0
+  'admin_toolbar_tools__extra_links:views_ui__content':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__block_content':
+    enabled: false
+    menu_name: admin
+    parent: entity.view.collection
+    weight: 0
+    expanded: false
